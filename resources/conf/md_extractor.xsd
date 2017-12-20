@@ -8,11 +8,11 @@
 			<xs:sequence>
 				<xs:element name="agent" type="xs:string" minOccurs="1" maxOccurs="1" />
 				<xs:element name="profile" type="xs:string" minOccurs="0" maxOccurs="1" />
-				<xs:element name="formatName" type="xs:string" minOccurs="1" maxOccurs="1" />
+				<xs:element name="formatName" type="xs:string" minOccurs="0" maxOccurs="1" />
 				<xs:element name="formatVersion" type="xs:string" minOccurs="0" maxOccurs="1" />
 				<xs:element name="mimeType" type="xs:string" minOccurs="0" maxOccurs="1" />
 				<xs:element name="imageCount" type="xs:int" minOccurs="0" maxOccurs="1" />
-				<xs:element name="isValid" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+				<xs:element name="isValid" type="xs:boolean" minOccurs="0" maxOccurs="1" />
 				<xs:element name="isWellFormed" type="xs:boolean" minOccurs="0" maxOccurs="1" />
 				<xs:element name="attributes" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
