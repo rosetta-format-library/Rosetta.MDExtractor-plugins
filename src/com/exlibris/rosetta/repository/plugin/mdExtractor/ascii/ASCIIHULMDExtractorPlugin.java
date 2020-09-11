@@ -42,7 +42,7 @@ public class ASCIIHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
 
     public String getAgentName()
     {
-    	return "JHOVE , ASCII-hul " + getRelease();
+    	return "JHOVE 1.24.2, ASCII-hul " + getRelease();
     }
     public String getAgent()
     {

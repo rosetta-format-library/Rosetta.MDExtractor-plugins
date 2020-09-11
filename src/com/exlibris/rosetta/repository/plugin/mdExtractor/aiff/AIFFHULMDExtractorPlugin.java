@@ -132,7 +132,7 @@ public class AIFFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
 
     public String getAgentName()
     {
-    	return "JHOVE , AIFF-hul " + getRelease();
+    	return "JHOVE 1.24.2, AIFF-hul " + getRelease();
     }
 
     public String getAgent()
