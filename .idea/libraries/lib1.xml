@@ -1,0 +1,31 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/lib/tiff-hul-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/jhove-core-1.24.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/utf8-hul-1.7.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/dps-sdk-4.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/aiff-hul-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/html-hul-1.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/jackson-core-asl-1.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/xml-hul-1.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/gif-hul-1.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/wave-hul-1.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/commons-httpclient-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/ascii-hul-1.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/jpeg-hul-1.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/jpeg2000-hul-1.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/axis.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/xmlbeans-2.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/httpcore-4.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/pdf-hul-1.12.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/commons-lang-2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/httpclient-4.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/zip4j-1.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/commons-io-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/lib/json-simple-1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

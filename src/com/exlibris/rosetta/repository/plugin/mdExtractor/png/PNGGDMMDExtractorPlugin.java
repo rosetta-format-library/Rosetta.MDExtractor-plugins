@@ -137,6 +137,11 @@ public class PNGGDMMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
         attList.add("PNGMetadata.Significant bits");
         attList.add("PNGMetadata.Keywords.Keyword.Key");
         attList.add("PNGMetadata.Keywords.Keyword.Value");
+        attList.add("PNGMetadata.Gamma");
+        attList.add("Blue background value");
+        attList.add("Red background value");
+        attList.add("Green background value");
+        attList.add("SRGB rendering intent");
     }
 
     @Override

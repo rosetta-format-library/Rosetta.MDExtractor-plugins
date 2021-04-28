@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="generated-plugins">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/generated-plugins/XMLHULMDExtractor1_24Plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/generated-plugins/BYTESTREAMHULMDExtractor1_24Plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/generated-plugins/UTF8HULMDExtractor1_24Plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/generated-plugins/WARCKBMDExtractor1_24Plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/generated-plugins/JPEGHULMDExtractor1_24Plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/generated-plugins/HTMLHULMDExtractor1_24Plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/generated-plugins/JPEG2000HULMDExtractor1_24Plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/generated-plugins/WaveHULMDExtractor1_24Plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/generated-plugins/PNGGDMMDExtractor1_24Plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/generated-plugins/ASCIIHULMDExtractor1_24Plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/generated-plugins/PDFHULMDExtractor1_24Plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/generated-plugins/GIFHULMDExtractor1_24Plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/generated-plugins/TIFFHULMDExtractor1_24Plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/generated-plugins/AIFFHULMDExtractor1_24Plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/generated-plugins/EPUBPTCMDExtractor1_24Plugin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
