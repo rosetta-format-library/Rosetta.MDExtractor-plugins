@@ -51,7 +51,8 @@ public abstract class AbstractJhoveMDExtractorPlugin implements MDExtractorPlugi
 
     public String release = null;
     public RepInfo repinfo = null;
-    private List<String> errorMessages = null;
+    protected List<String> errorMessages = null;
+    protected List<String> errorIds = null;
     private Integer multiPageSize = 0;
 
     public void extract(String fileName, String jhoveModule, String pluginVersion) throws Exception
@@ -71,7 +72,7 @@ public abstract class AbstractJhoveMDExtractorPlugin implements MDExtractorPlugi
     	for (Message message: list) {
     		log.warn("jhove message: " + message.getMessage());
     		if (message instanceof ErrorMessage){
-    			addError(message.getMessage());
+    			addError(message.getId(),message.getMessage());
     		}
     	}
     }
@@ -96,7 +97,7 @@ public abstract class AbstractJhoveMDExtractorPlugin implements MDExtractorPlugi
 
 			//if no property is returned - throw exception
 			if ((repinfo.getProperty() == null) || (repinfo.getProperty().isEmpty())) {
-				addError("Failed to retrieve extractor properties");
+				addError(null,"Failed to retrieve extractor properties");
 			}
 
 			//throw new DigitoolException(DescriptorConstants.GN_UnexpectedError, "JHOVE Tech Md Extractor failed to retrieve extractor properties");
@@ -355,6 +356,10 @@ public abstract class AbstractJhoveMDExtractorPlugin implements MDExtractorPlugi
     	return errorMessages;
     }
 
+    public List<String> getExtractionErrorIds() {
+    	return errorIds;
+    }
+
     private static String ColectionPropertyToString(Object object){
 
     	String res = "";
@@ -382,11 +387,16 @@ public abstract class AbstractJhoveMDExtractorPlugin implements MDExtractorPlugi
     	return res;
     }
 
-    private void addError(String message) {
+    protected void addError(String id, String message) {
     	if (errorMessages == null) {
     		errorMessages = new ArrayList<String>();
     	}
+    	if (errorIds == null) {
+    		errorIds = new ArrayList<String>();
+    	}
     	errorMessages.add(message);
+    	if(id != null)
+    		errorIds.add(id);
     }
 
     public class DpsHandler extends HandlerBase {
