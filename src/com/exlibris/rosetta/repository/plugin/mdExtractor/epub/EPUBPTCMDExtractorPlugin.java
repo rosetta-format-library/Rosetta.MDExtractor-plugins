@@ -7,6 +7,8 @@ import java.util.Map;
 import com.exlibris.core.infra.common.exceptions.logging.ExLogger;
 import com.exlibris.rosetta.repository.plugin.mdExtractor.base.AbstractJhoveMDExtractorPlugin;
 
+import javax.imageio.ImageIO;
+
 public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
     private static ExLogger log = ExLogger.getExLogger(EPUBPTCMDExtractorPlugin.class);
     private static String jhoveModule = "EPUB-ptc";
@@ -45,6 +47,7 @@ public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
 
     @Override
     public void extract(String fileName) throws Exception {
+        ImageIO.scanForPlugins(); //Make the container to reload com.sun.imageio.plugins.jpeg.JPEGImageReader to ignore the ambiguous classes, such as: com.twelvemonkeys.imageio.plugins.jpeg.JPEGImageReader
         super.extract(fileName, jhoveModule, pluginVersion);
     }
 
