@@ -1,6 +1,9 @@
 .gradle
 /build/
 
+#Ignore build related files
+target/
+
 # Ignore Gradle GUI config
 gradle-app.setting
 
@@ -14,4 +17,5 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 /generated-plugins/
-/target/
+/generated-plugins/**
+
