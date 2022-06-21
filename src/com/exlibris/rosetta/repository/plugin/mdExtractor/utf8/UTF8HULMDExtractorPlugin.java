@@ -46,7 +46,7 @@ public class UTF8HULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
 
     public String getAgentName()
     {
-    	return "JHOVE , UTF8-hul " + getRelease();
+    	return "JHOVE 1.26.0, UTF8-hul " + getRelease();
     }
 
     public String getAgent()

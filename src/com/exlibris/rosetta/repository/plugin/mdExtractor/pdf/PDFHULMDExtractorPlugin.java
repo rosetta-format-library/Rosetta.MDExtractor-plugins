@@ -183,7 +183,7 @@ public class PDFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
 
     public String getAgentName()
     {
-    	return "JHOVE , PDF-hul " + getRelease();
+    	return "JHOVE 1.26.0, PDF-hul " + getRelease();
     }
 
     public String getAgent()

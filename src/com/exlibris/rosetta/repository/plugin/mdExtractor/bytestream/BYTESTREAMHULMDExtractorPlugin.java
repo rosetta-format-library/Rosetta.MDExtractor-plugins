@@ -30,7 +30,7 @@ public class BYTESTREAMHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlug
 
     public String getAgentName()
     {
-    	return "JHOVE , BYTESTREAM " + getRelease();
+    	return "JHOVE 1.26.0, BYTESTREAM " + getRelease();
     }
 
     public String getAgent()

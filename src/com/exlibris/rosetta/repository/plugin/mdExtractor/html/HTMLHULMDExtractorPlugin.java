@@ -61,7 +61,7 @@ public class HTMLHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
 
     public String getAgentName()
     {
-    	return "JHOVE , HTML-hul " + getRelease();
+    	return "JHOVE 1.26.0, HTML-hul " + getRelease();
     }
 
     public String getAgent()
