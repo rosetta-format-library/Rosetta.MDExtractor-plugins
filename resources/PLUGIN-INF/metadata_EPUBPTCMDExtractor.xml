@@ -1,6 +1,6 @@
 <pl:metadata-config xmlns:pl="http://www.exlibrisgroup.com/Plugins/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
   <pl:pluginTypeName>MDExtractorPlugin</pl:pluginTypeName>
-  <pl:deployName>XML-hul-1.26</pl:deployName>
+  <pl:deployName>EPUB-hul-1.26</pl:deployName>
   <pl:className>com.exlibris.rosetta.repository.plugin.mdExtractor.epub.EPUBPTCMDExtractorPlugin</pl:className>
   <pl:initParameters>
     <fr:x_form xmlns:fr="http://com/exlibris/digitool/common/forms/xmlbeans">
