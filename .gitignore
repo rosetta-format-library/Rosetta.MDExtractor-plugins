@@ -19,3 +19,4 @@ gradle-app.setting
 /generated-plugins/
 /generated-plugins/**
 
+.idea/
