@@ -57,7 +57,7 @@ public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
     }
 
     public String getAgentName() {
-        return "JHOVE 1.26.0, EPUB-ptc " + getRelease();
+        return "JHOVE 1.26.1, EPUB-ptc " + getRelease();
     }
 
     public String getAgent() {
