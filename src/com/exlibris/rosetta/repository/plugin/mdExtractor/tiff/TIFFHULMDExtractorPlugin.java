@@ -70,7 +70,9 @@ public class TIFFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DateTimeProcessed");
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DeviceSource");
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DigitalCameraManufacturer");
-        	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DigitalCameraModel");
+        	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DigitalCameraModelName");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DigitalCameraModelNumber");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DigitalCameraModelSerialNo");
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DisplayOrientation");
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.ExposureBias");
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.ExposureIndex");
