@@ -16,15 +16,20 @@ public class PDFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
     private static List<String> attList = new ArrayList<String>();
     static {
 
-    	attList.add("PDFMetadata.DocumentCatalog.PageLayout");
+    	attList.add("PDFMetadata.DocumentCatalog.BaseVersion");
+	attList.add("PDFMetadata.DocumentCatalog.DeveloperPrefix");    
+	attList.add("PDFMetadata.DocumentCatalog.ExtensionLevel");
+        attList.add("PDFMetadata.DocumentCatalog.PageLayout");
     	attList.add("PDFMetadata.DocumentCatalog.PageMode");
-    	attList.add("PDFMetadata.Encryption.Algorithm");
+	attList.add("PDFMetadata.Encryption.Algorithm");
     	attList.add("PDFMetadata.Encryption.EFF");
     	attList.add("PDFMetadata.Encryption.KeyLength");
     	attList.add("PDFMetadata.Encryption.SecurityHandler");
+	attList.add("PDFMetadata.Encryption.StandardSecurityHandler.OwnerEncryptionKey");    
     	attList.add("PDFMetadata.Encryption.StandardSecurityHandler.OwnerString");
     	attList.add("PDFMetadata.Encryption.StandardSecurityHandler.Revision");
     	attList.add("PDFMetadata.Encryption.StandardSecurityHandler.UserAccess");
+	attList.add("PDFMetadata.Encryption.StandardSecurityHandler.UserEncryptionKey");                  
     	attList.add("PDFMetadata.Encryption.StandardSecurityHandler.UserString");
     	attList.add("PDFMetadata.Filters.FilterPipeline");
     	attList.add("PDFMetadata.Fonts.TrueType.Font.BaseFont");
@@ -183,7 +188,7 @@ public class PDFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
 
     public String getAgentName()
     {
-    	return "JHOVE , PDF-hul " + getRelease();
+    	return "JHOVE 1.26.1, PDF-hul " + getRelease();
     }
 
     public String getAgent()

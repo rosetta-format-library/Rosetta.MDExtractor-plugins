@@ -43,6 +43,26 @@ public class TIFFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.DNGProperties.UniqueCameraModel");
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.DocmentName");
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.DotRange");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.Version");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.Revision");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.NumberOfKeys");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.GTModelType");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.GTRasterType");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.GTCitation");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.GeogGeodeticDatum");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.GeogEllipsoid");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.ProjectedCSType");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.PCSCitation");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.Projection");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.ProjCoordTrans");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.ProjLinearUnits");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.ProjNatOriginLong");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.ProjNatOriginLat");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.ProjFalseEasting");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.ProjFalseNorthing");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.GeoKeyDirectory.ProjScaleAtNatOrigin");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.ModelTiepointTag");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.GeoTIFFProperties.ModelPixelScaleTag");		 
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.ImageDescription");
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.InkSet");
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.JPEGTables");
@@ -70,7 +90,9 @@ public class TIFFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DateTimeProcessed");
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DeviceSource");
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DigitalCameraManufacturer");
-        	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DigitalCameraModel");
+        	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DigitalCameraModelName");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DigitalCameraModelNumber");
+		 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DigitalCameraModelSerialNo");
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.DisplayOrientation");
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.ExposureBias");
         	 attList.add("TIFFMetadata.IFDs.IFD.Entries.NisoImageMetadata.ExposureIndex");
@@ -220,7 +242,7 @@ public class TIFFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
 
     public String getAgentName()
     {
-    	return "JHOVE , TIFF-hul " + getRelease();
+    	return "JHOVE 1.26.1, TIFF-hul " + getRelease();
     }
 
     public String getAgent()

@@ -192,7 +192,7 @@ public class JPEG2000HULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin
 
     public String getAgentName()
     {
-    	return "JHOVE , JPEG2000-hul " + getRelease();
+    	return "JHOVE 1.26.1, JPEG2000-hul " + getRelease();
     }
 
     public String getAgent()
