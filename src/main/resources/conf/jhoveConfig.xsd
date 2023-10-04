@@ -3,6 +3,7 @@
 <!-- Copyright 2004-2007 by JSTOR and the President and Fellows of Harvard College -->
 <!-- JHOVE configuration file schema, Rel. 1.4 (2007-04-10) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="http://hul.harvard.edu/ois/xml/ns/jhove/jhoveConfig"
  elementFormDefault="qualified" attributeFormDefault="unqualified">
  <xs:element name="jhoveConfig">
   <xs:annotation>
@@ -10,9 +11,19 @@
   </xs:annotation>
   <xs:complexType>
    <xs:sequence>
+    <xs:element name="jhoveHome" type="xs:string">
+     <xs:annotation>
+      <xs:documentation>JHOVE home directory.</xs:documentation>
+     </xs:annotation>
+    </xs:element>
     <xs:element name="defaultEncoding" type="xs:string" minOccurs="0">
      <xs:annotation>
       <xs:documentation>Default character encoding used by the output handlers.</xs:documentation>
+     </xs:annotation>
+    </xs:element>
+    <xs:element name="languageCode" type="xs:string" minOccurs="0" maxOccurs="1">
+     <xs:annotation>
+      <xs:documentation>Override the default localisation with your own internationalisation code.</xs:documentation>
      </xs:annotation>
     </xs:element>
     <xs:element name="tempDirectory" type="xs:string" minOccurs="0">
