@@ -229,7 +229,7 @@
 
 	<target name="copy-resources">
 		<copy todir="./target">
-			<fileset dir="resources"/>
+			<fileset dir="src/main/resources"/>
 			<fileset dir="." includes="lib/*.jar" />
 		</copy>
 	</target>
