@@ -15,7 +15,7 @@ dependencies {
     implementation 'org.openpreservation.jhove.modules:aiff-hul:1.6.2'
     implementation 'org.openpreservation.jhove.modules:ascii-hul:1.4.2'
     implementation 'org.openpreservation.jhove.modules:gif-hul:1.4.3'
-    implementation 'org.openpreservation.jhove.modules:html-hul:1.5.3'
+    implementation 'org.openpreservation.jhove.modules:html-hul:1.4.3'
     implementation 'org.openpreservation.jhove.modules:jpeg2000-hul:1.4.4'
     implementation 'org.openpreservation.jhove.modules:jpeg-hul:1.5.4'
     implementation 'org.openpreservation.jhove.modules:pdf-hul:1.12.4'
