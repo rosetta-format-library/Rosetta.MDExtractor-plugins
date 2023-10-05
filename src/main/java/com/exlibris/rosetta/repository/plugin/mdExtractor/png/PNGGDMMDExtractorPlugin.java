@@ -158,7 +158,7 @@ public class PNGGDMMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
 
     public String getAgentName()
     {
-    	return "JHOVE 1.26.1, PNG-gdm " + getRelease();
+    	return "JHOVE 1.28.0, PNG-gdm " + getRelease();
     }
 
     public String getAgent()

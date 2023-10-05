@@ -185,7 +185,7 @@ public class JPEGHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
     }
 
     public String getAgentName() {
-        return "JHOVE 1.26.1, JPEG-hul " + getRelease();
+        return "JHOVE 1.28.0, JPEG-hul " + getRelease();
     }
 
     public String getAgent() {
