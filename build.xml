@@ -24,7 +24,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-JPEGHULMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/JPEGHULMDExtractor1_26Plugin.jar">
@@ -37,7 +37,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-JPEG2000HULMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/JPEG2000HULMDExtractor1_26Plugin.jar">
@@ -50,7 +50,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-AIFFHULMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/AIFFHULMDExtractor1_26Plugin.jar">
@@ -63,7 +63,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-ASCIIHULMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/ASCIIHULMDExtractor1_26Plugin.jar">
@@ -76,7 +76,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-BYTESTREAMHULMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/BYTESTREAMHULMDExtractor1_26Plugin.jar">
@@ -89,7 +89,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-GIFHULMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/GIFHULMDExtractor1_26Plugin.jar">
@@ -102,7 +102,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-HTMLHULMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/HTMLHULMDExtractor1_26Plugin.jar">
@@ -115,7 +115,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-XMLHULMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/XMLHULMDExtractor1_26Plugin.jar">
@@ -129,7 +129,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-PDFHULMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/PDFHULMDExtractor1_26Plugin.jar">
@@ -142,7 +142,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-TIFFHULMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/TIFFHULMDExtractor1_26Plugin.jar">
@@ -155,7 +155,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-UTF8HULMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/UTF8HULMDExtractor1_26Plugin.jar">
@@ -168,7 +168,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-WaveHULMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/WaveHULMDExtractor1_26Plugin.jar">
@@ -181,7 +181,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-EPUBPTCMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/EPUBPTCMDExtractor1_26Plugin.jar">
@@ -194,7 +194,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-PNGGDMMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/PNGGDMMDExtractor1_26Plugin.jar">
@@ -207,7 +207,7 @@
 	<target depends="clean-all, prepare-dirs, copy-resources" name="build-WARCKBMDExtractor1_26Plugin">
 				<echo message="${ant.project.name}: ${ant.file}" />
 				<javac debug="true" debuglevel="${debuglevel}" destdir="./target" source="${source}" target="${target}">
-					<src path="src" />
+					<src path="src/main/java" />
 					<classpath refid="MDExtractor-plugins.classpath" />
 				</javac>
 				<jar destfile="./generated-plugins/WARCKBMDExtractor1_26Plugin.jar">
