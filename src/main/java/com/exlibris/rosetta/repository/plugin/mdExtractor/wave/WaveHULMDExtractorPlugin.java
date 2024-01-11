@@ -94,7 +94,7 @@ public class WaveHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
     	attList.add("WAVEMetadata.BroadcastAudioExtension.CodingHistory");
     	attList.add("WAVEMetadata.BroadcastAudioExtension.Description");
     	attList.add("WAVEMetadata.BroadcastAudioExtension.OriginationDate");
-    	attList.add("WAVEMetadata.BroadcastAudioExtension.OriginationReference");
+    	attList.add("WAVEMetadata.BroadcastAudioExtension.OriginatorReference");
     	attList.add("WAVEMetadata.BroadcastAudioExtension.OriginationTime");
     	attList.add("WAVEMetadata.BroadcastAudioExtension.Originator");
     	attList.add("WAVEMetadata.BroadcastAudioExtension.TimeReference");
@@ -103,8 +103,9 @@ public class WaveHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
     	attList.add("WAVEMetadata.CompressionCode");
     	attList.add("WAVEMetadata.Data.DataLength");
     	attList.add("WAVEMetadata.ListInfo.Artist");
-    	attList.add("WAVEMetadata.ListInfo.Comment");
+    	attList.add("WAVEMetadata.ListInfo.Comments");
     	attList.add("WAVEMetadata.ListInfo.Track");
+	attList.add("WAVEMetadata.ListInfo.SourceForm");
 
 
     }
