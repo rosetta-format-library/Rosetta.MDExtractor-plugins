@@ -66,7 +66,7 @@ public class PDFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
 	attList.add("PDFMetadata.Fonts.Type1.Font.Encoding");
 	attList.add("PDFMetadata.Fonts.Type1.Font.ToUnicode");
 	attList.add("PDFMetadata.Fonts.Type1.Font.FontDescriptor.FontName");
-	attList.add("PDFMetadata.Fonts.Type1.Font.FontDescriptor.FontFile");
+	attList.add("PDFMetadata.Fonts.Type1.Font.FontDescriptor.FontFile3");
 	attList.add("PDFMetadata.Fonts.Type1.Font.FontDescriptor.Flags");
 	attList.add("PDFMetadata.Fonts.Type1.Font.FontDescriptor.FontBBox");
 	attList.add("PDFMetadata.Fonts.Type1.Font.EncodingDictionary.BaseEncoding");
