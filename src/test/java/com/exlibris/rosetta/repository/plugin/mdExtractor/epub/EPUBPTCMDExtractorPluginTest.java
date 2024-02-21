@@ -35,6 +35,25 @@ public class EPUBPTCMDExtractorPluginTest extends AbstractNLNZMDExtractorPluginT
         assert b.equals("true");
     }
 
+    @Test
+    public void testExtractFonts() throws Exception {
+        ClassLoader classLoader = getClass().getClassLoader();
+        File file = new File(Objects.requireNonNull(classLoader.getResource("font-obfuscation.epub")).getFile());
+        testInstance.extract(file.getAbsolutePath());
+        Object a = testInstance.getOriginalAttributeByName("EPUBMetadata.Fonts");
+        assert a != null;
+    }
+
+    @Test
+    public void testExtractFontNames() throws Exception {
+        ClassLoader classLoader = getClass().getClassLoader();
+        File file = new File(Objects.requireNonNull(classLoader.getResource("font-obfuscation.epub")).getFile());
+        testInstance.extract(file.getAbsolutePath());
+        String a = testInstance.getAttributeByName("EPUBMetadata.Fonts.Font.FontName");
+        assert a != null;
+        assert !a.isEmpty();
+    }
+
     @Override
     public void testGetSupportedAttributeNames() throws Exception {
 
@@ -54,4 +73,5 @@ public class EPUBPTCMDExtractorPluginTest extends AbstractNLNZMDExtractorPluginT
     protected void prepareExpectedValues() {
 
     }
+
 }

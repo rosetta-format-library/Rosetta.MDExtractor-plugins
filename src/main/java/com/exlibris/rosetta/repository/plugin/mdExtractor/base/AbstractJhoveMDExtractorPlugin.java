@@ -374,6 +374,97 @@ public abstract class AbstractJhoveMDExtractorPlugin implements MDExtractorPlugi
         }
     }
 
+    protected static Object extractOriginalJhoveValue(String[] fieldPath, Property parentProperty, int fieldPathCurrentSegment) {
+
+        //end of path - property not found
+        if (null == fieldPath || null == parentProperty || fieldPathCurrentSegment < 0)
+            return null;
+
+        //last property in the path - return value
+        if (fieldPathCurrentSegment >= fieldPath.length - 1)
+            return parentProperty.getValue();
+
+        //NisoImageMetadata
+        if (PropertyType.NISOIMAGEMETADATA.equals(parentProperty.getType())) {
+            NisoImageMetadata nisoMetadata = (NisoImageMetadata) parentProperty.getValue();
+            try {
+                // getter reflection
+                Object object = nisoMetadata.getClass().getMethod(
+                        "get" + fieldPath[++fieldPathCurrentSegment]).invoke(nisoMetadata);
+                return object;
+
+            } catch (Exception e) {
+                log.error(e.toString());
+            }
+            return null;
+        }
+
+
+        //TextMDMetadata
+        if (PropertyType.TEXTMDMETADATA.equals(parentProperty.getType())) {
+            TextMDMetadata textMDMetadata = (TextMDMetadata) parentProperty.getValue();
+            try {
+                // getter reflection
+                Object object = textMDMetadata.getClass().getMethod(
+                        "get" + fieldPath[++fieldPathCurrentSegment]).invoke(textMDMetadata);
+                return object;
+
+            } catch (Exception e) {
+                log.error(e.toString());
+            }
+            return null;
+        }
+
+
+        //AESAudioMedata
+        if (PropertyType.AESAUDIOMETADATA.equals(parentProperty.getType())) {
+            AESAudioMetadata aesMetadata = (AESAudioMetadata) parentProperty.getValue();
+            try {
+                // getter reflection
+                Object object = aesMetadata.getClass().getMethod(
+                        "get" + fieldPath[++fieldPathCurrentSegment]).invoke(aesMetadata);
+                return object;
+            } catch (Exception e) {
+                log.error(e.toString());
+            }
+            return null;
+        }
+
+        //get next property from the path - continue recursion
+        //try to extract the child property using get "getByName"
+        //in case that the parent property is scalar and the still has child - using "getValue".
+        fieldPathCurrentSegment++;
+        String nextPropName = fieldPath[fieldPathCurrentSegment];
+        Property nextProp = parentProperty.getByName(nextPropName);
+
+        if (nextProp == null && parentProperty.getArity().equals(PropertyArity.SCALAR) && parentProperty.getValue() != null) {
+
+            nextProp = (Property) parentProperty.getValue();
+        }
+
+
+        return extractOriginalJhoveValue(fieldPath, nextProp, fieldPathCurrentSegment);
+    }
+
+    public Object getOriginalAttributeByName(String attributeName) {
+
+        // avoid null pointer exception in case property is null.
+        if (repinfo.getProperty() == null) {
+            return null;
+        }
+
+        try {
+            String[] jhoveFieldPath = attributeName.split("\\.");
+            if (attributeName.endsWith(".")) {
+                jhoveFieldPath[jhoveFieldPath.length - 1] = jhoveFieldPath[jhoveFieldPath.length - 1] + ".";
+            }
+            Object propertyValue = extractOriginalJhoveValue(jhoveFieldPath, repinfo.getByName(jhoveFieldPath[0]), 0);
+            return propertyValue;
+        } catch (Throwable e) {
+            return null;
+        }
+    }
+
     public String getFormatName() {
         return repinfo.getFormat();
     }

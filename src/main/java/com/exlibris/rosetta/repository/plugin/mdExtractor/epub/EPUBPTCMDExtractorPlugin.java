@@ -1,11 +1,10 @@
 package com.exlibris.rosetta.repository.plugin.mdExtractor.epub;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import com.exlibris.core.infra.common.exceptions.logging.ExLogger;
 import com.exlibris.rosetta.repository.plugin.mdExtractor.base.AbstractJhoveMDExtractorPlugin;
+import edu.harvard.hul.ois.jhove.Property;
 
 import javax.imageio.ImageIO;
 
@@ -66,5 +65,32 @@ public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
 
     public void initParams(Map<String, String> initParams) {
         this.pluginVersion = initParams.get(PLUGIN_VERSION_INIT_PARAM);
+    }
+
+    @Override
+    public String getAttributeByName(String attributeName) {
+        if (attributeName != null && attributeName.equalsIgnoreCase("EPUBMetadata.Fonts.Font.FontName")) {
+            Object object = this.getOriginalAttributeByName("EPUBMetadata.Fonts");
+            if (object == null) {
+                return null;
+            }
+            TreeSet<Property> fonts = (TreeSet<Property>) object;
+            List<String> fontNames = new ArrayList<>();
+            for (Property font : fonts) {
+                if (!font.getName().equalsIgnoreCase("Font")) {
+                    continue;
+                }
+                TreeSet<Property> fontValues = (TreeSet<Property>) font.getValue();
+                for (Property fontItem : fontValues) {
+                    if (!fontItem.getName().equalsIgnoreCase("FontName")) {
+                        continue;
+                    }
+                    fontNames.add(fontItem.getValue().toString());
+                }
+            }
+            return String.join(";", fontNames);
+        } else {
+            return super.getAttributeByName(attributeName);
+        }
     }
 }
