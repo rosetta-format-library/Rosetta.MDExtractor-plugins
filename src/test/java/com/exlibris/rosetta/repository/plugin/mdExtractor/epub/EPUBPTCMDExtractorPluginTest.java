@@ -49,7 +49,17 @@ public class EPUBPTCMDExtractorPluginTest extends AbstractNLNZMDExtractorPluginT
         ClassLoader classLoader = getClass().getClassLoader();
         File file = new File(Objects.requireNonNull(classLoader.getResource("font-obfuscation.epub")).getFile());
         testInstance.extract(file.getAbsolutePath());
-        String a = testInstance.getAttributeByName("EPUBMetadata.Fonts.Font.FontName");
+        String a = testInstance.getAttributeByName("EPUBMetadata.Fonts.Fonts.FontName");
+        assert a != null;
+        assert !a.isEmpty();
+    }
+
+    @Test
+    public void testExtractFonFiles() throws Exception {
+        ClassLoader classLoader = getClass().getClassLoader();
+        File file = new File(Objects.requireNonNull(classLoader.getResource("font-obfuscation.epub")).getFile());
+        testInstance.extract(file.getAbsolutePath());
+        String a = testInstance.getAttributeByName("EPUBMetadata.Fonts.Fonts.FontFile");
         assert a != null;
         assert !a.isEmpty();
     }

@@ -219,7 +219,7 @@ public class PDFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
         attList.add("PDFMetadata.Objects");
         attList.add("PDFMetadata.Pages.Page.Sequence");
         attList.add("PDFMetadata.XMP");
-
+        attList.add("PDFMetadata.Pages.PageCount");
     }
 
 

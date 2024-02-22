@@ -69,7 +69,7 @@ public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
 
     @Override
     public String getAttributeByName(String attributeName) {
-        if (attributeName != null && attributeName.equalsIgnoreCase("EPUBMetadata.Fonts.Font.FontName")) {
+        if (attributeName != null && attributeName.equalsIgnoreCase("EPUBMetadata.Fonts.Fonts.FontName")) {
             Object object = this.getOriginalAttributeByName("EPUBMetadata.Fonts");
             if (object == null) {
                 return null;
@@ -89,6 +89,26 @@ public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
                 }
             }
             return String.join(";", fontNames);
+        } else if (attributeName != null && attributeName.equalsIgnoreCase("EPUBMetadata.Fonts.Fonts.FontFile")) {
+            Object object = this.getOriginalAttributeByName("EPUBMetadata.Fonts");
+            if (object == null) {
+                return null;
+            }
+            TreeSet<Property> fonts = (TreeSet<Property>) object;
+            List<String> fontFiles = new ArrayList<>();
+            for (Property font : fonts) {
+                if (!font.getName().equalsIgnoreCase("Font")) {
+                    continue;
+                }
+                TreeSet<Property> fontValues = (TreeSet<Property>) font.getValue();
+                for (Property fontItem : fontValues) {
+                    if (!fontItem.getName().equalsIgnoreCase("FontFile")) {
+                        continue;
+                    }
+                    fontFiles.add(fontItem.getValue().toString());
+                }
+            }
+            return String.join(";", fontFiles);
         } else {
             return super.getAttributeByName(attributeName);
         }
