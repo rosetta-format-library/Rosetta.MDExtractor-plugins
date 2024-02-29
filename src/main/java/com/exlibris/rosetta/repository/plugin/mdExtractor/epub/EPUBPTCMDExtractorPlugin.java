@@ -29,10 +29,8 @@ public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
         attList.add("EPUBMetadata.Info.Publisher");
         attList.add("EPUBMetadata.Info.Subject");
         attList.add("EPUBMetadata.Info.Rights");
-
-        attList.add("EPUBMetadata.Fonts.Fonts.FontName");
-        attList.add("EPUBMetadata.Fonts.Fonts.FontFile");
-
+        attList.add("EPUBMetadata.Fonts.Font.FontName");
+        attList.add("EPUBMetadata.Fonts.Font.FontFile");
         attList.add("EPUBMetadata.MediaTypes");
         attList.add("EPUBMetadata.References");
         attList.add("EPUBMetadata.Resources");
@@ -42,6 +40,8 @@ public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
         attList.add("EPUBMetadata.hasVideo");
         attList.add("EPUBMetadata.hasFixedLayout");
         attList.add("EPUBMetadata.hasScripts");
+        attList.add("EPUBMetadata.Fonts.Fonts.FontName");
+        attList.add("EPUBMetadata.Fonts.Fonts.FontFile");
     }
 
     @Override
