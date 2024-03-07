@@ -36,27 +36,6 @@ public class EPUBPTCMDExtractorPluginTest extends AbstractNLNZMDExtractorPluginT
         assert true;
     }
 
-    @Test
-    public void testExtractFontName() throws Exception {
-        ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(Objects.requireNonNull(classLoader.getResource("font-obfuscation.epub")).getFile());
-        testInstance.extract(file.getAbsolutePath());
-        String a = testInstance.getAttributeByName("EPUBMetadata.Fonts.Font.FontName");
-        assert a != null;
-        assert !a.isEmpty();
-        assert a.equals("AvenirLT-Roman");
-    }
-
-    @Test
-    public void testExtractFontFile() throws Exception {
-        ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(Objects.requireNonNull(classLoader.getResource("font-obfuscation.epub")).getFile());
-        testInstance.extract(file.getAbsolutePath());
-        String a = testInstance.getAttributeByName("EPUBMetadata.Fonts.Font.FontFile");
-        assert a != null;
-        assert !a.isEmpty();
-        assert a.equals("true");
-    }
 
     @Test
     public void testExtractFonts() throws Exception {
@@ -70,21 +49,23 @@ public class EPUBPTCMDExtractorPluginTest extends AbstractNLNZMDExtractorPluginT
     @Test
     public void testExtractFontsNames() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(Objects.requireNonNull(classLoader.getResource("font-obfuscation.epub")).getFile());
+        File file = new File(Objects.requireNonNull(classLoader.getResource("accessible_epub_3.epub")).getFile());
         testInstance.extract(file.getAbsolutePath());
-        String a = testInstance.getAttributeByName("EPUBMetadata.Fonts.Fonts.FontName");
+        String a = testInstance.getAttributeByName("EPUBMetadata.Fonts.Font.FontName");
         assert a != null;
         assert !a.isEmpty();
+        assert a.split(";").length == 6;
     }
 
     @Test
     public void testExtractFonsFiles() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(Objects.requireNonNull(classLoader.getResource("font-obfuscation.epub")).getFile());
+        File file = new File(Objects.requireNonNull(classLoader.getResource("accessible_epub_3.epub")).getFile());
         testInstance.extract(file.getAbsolutePath());
-        String a = testInstance.getAttributeByName("EPUBMetadata.Fonts.Fonts.FontFile");
+        String a = testInstance.getAttributeByName("EPUBMetadata.Fonts.Font.FontFile");
         assert a != null;
         assert !a.isEmpty();
+        assert a.split(";").length == 6;
     }
 
     @Override
