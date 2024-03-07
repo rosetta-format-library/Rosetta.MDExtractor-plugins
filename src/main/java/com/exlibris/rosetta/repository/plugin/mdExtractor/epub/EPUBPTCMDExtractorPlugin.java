@@ -20,7 +20,6 @@ public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
         attList.add("EPUBMetadata.PageCount");
         attList.add("EPUBMetadata.CharacterCount");
         attList.add("EPUBMetadata.Language");
-
         attList.add("EPUBMetadata.Info.Identifier");
         attList.add("EPUBMetadata.Info.Title");
         attList.add("EPUBMetadata.Info.Creator");
@@ -40,8 +39,6 @@ public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
         attList.add("EPUBMetadata.hasVideo");
         attList.add("EPUBMetadata.hasFixedLayout");
         attList.add("EPUBMetadata.hasScripts");
-        attList.add("EPUBMetadata.Fonts.Fonts.FontName");
-        attList.add("EPUBMetadata.Fonts.Fonts.FontFile");
     }
 
     @Override
@@ -69,7 +66,7 @@ public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
 
     @Override
     public String getAttributeByName(String attributeName) {
-        if (attributeName != null && attributeName.equalsIgnoreCase("EPUBMetadata.Fonts.Fonts.FontName")) {
+        if (attributeName != null && attributeName.equalsIgnoreCase("EPUBMetadata.Fonts.Font.FontName")) {
             Object object = this.getOriginalAttributeByName("EPUBMetadata.Fonts");
             if (object == null) {
                 return null;
@@ -89,7 +86,7 @@ public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
                 }
             }
             return String.join(";", fontNames);
-        } else if (attributeName != null && attributeName.equalsIgnoreCase("EPUBMetadata.Fonts.Fonts.FontFile")) {
+        } else if (attributeName != null && attributeName.equalsIgnoreCase("EPUBMetadata.Fonts.Font.FontFile")) {
             Object object = this.getOriginalAttributeByName("EPUBMetadata.Fonts");
             if (object == null) {
                 return null;
