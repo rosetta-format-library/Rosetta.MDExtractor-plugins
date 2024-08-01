@@ -39,12 +39,12 @@ public class PDFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
         attList.add("PDFMetadata.Encryption.Algorithm");
         attList.add("PDFMetadata.Encryption.EFF");
         attList.add("PDFMetadata.Encryption.KeyLength");
-        attList.add("PDFMetadata.Encryption.SecurityHandler");
-        attList.add("PDFMetadata.Encryption.StandardSecurityHandler.OwnerEncryptionKey");
+    	  attList.add("PDFMetadata.Encryption.SecurityHandler");
+      	attList.add("PDFMetadata.Encryption.StandardSecurityHandler.OwnerEncryptionKey");    
         attList.add("PDFMetadata.Encryption.StandardSecurityHandler.OwnerString");
         attList.add("PDFMetadata.Encryption.StandardSecurityHandler.Revision");
         attList.add("PDFMetadata.Encryption.StandardSecurityHandler.UserAccess");
-        attList.add("PDFMetadata.Encryption.StandardSecurityHandler.UserEncryptionKey");
+	      attList.add("PDFMetadata.Encryption.StandardSecurityHandler.UserEncryptionKey");                  
         attList.add("PDFMetadata.Encryption.StandardSecurityHandler.UserString");
         attList.add("PDFMetadata.Filters.FilterPipeline");
         attList.add("PDFMetadata.Fonts.TrueType.Font.Name");
@@ -68,7 +68,7 @@ public class PDFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
         attList.add("PDFMetadata.Fonts.Type1.Font.Encoding");
         attList.add("PDFMetadata.Fonts.Type1.Font.ToUnicode");
         attList.add("PDFMetadata.Fonts.Type1.Font.FontDescriptor.FontName");
-        attList.add("PDFMetadata.Fonts.Type1.Font.FontDescriptor.FontFile");
+        attList.add("PDFMetadata.Fonts.Type1.Font.FontDescriptor.FontFile3");
         attList.add("PDFMetadata.Fonts.Type1.Font.FontDescriptor.Flags");
         attList.add("PDFMetadata.Fonts.Type1.Font.FontDescriptor.FontBBox");
         attList.add("PDFMetadata.Fonts.Type1.Font.EncodingDictionary.BaseEncoding");
@@ -87,7 +87,7 @@ public class PDFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
         attList.add("PDFMetadata.Fonts.Type3.Font.FirstChar");
         attList.add("PDFMetadata.Fonts.Type3.Font.LastChar");
         attList.add("PDFMetadata.Fonts.Type3.Font.FontBBox");
-        attList.add("PDFMetadata.Fonts.Type3.Font.EncodingDictionary.Differences");
+        attList.add("PDFMetadata.Fonts.Type3.Font.EncodingDictionary.Differences");    
         attList.add("PDFMetadata.FreeObjects");
         attList.add("PDFMetadata.ID");
         attList.add("PDFMetadata.Images.Image.Intent");
@@ -219,7 +219,6 @@ public class PDFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
         attList.add("PDFMetadata.Objects");
         attList.add("PDFMetadata.Pages.Page.Sequence");
         attList.add("PDFMetadata.XMP");
-        attList.add("PDFMetadata.Pages.PageCount");
     }
 
 

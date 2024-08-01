@@ -103,7 +103,11 @@ public class WaveHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
     	attList.add("WAVEMetadata.CompressionCode");
     	attList.add("WAVEMetadata.Data.DataLength");
     	attList.add("WAVEMetadata.ListInfo.Artist");
+	attList.add("WAVEMetadata.ListInfo.ArchivalLocation");
     	attList.add("WAVEMetadata.ListInfo.Comments");
+	attList.add("WAVEMetadata.ListInfo.Copyright");
+	attList.add("WAVEMetadata.ListInfo.CreationDate");
+	attList.add("WAVEMetadata.ListInfo.Name");
     	attList.add("WAVEMetadata.ListInfo.Track");
 	attList.add("WAVEMetadata.ListInfo.SourceForm");
 
