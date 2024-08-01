@@ -1,11 +1,10 @@
 package com.exlibris.rosetta.repository.plugin.mdExtractor.epub;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import com.exlibris.core.infra.common.exceptions.logging.ExLogger;
 import com.exlibris.rosetta.repository.plugin.mdExtractor.base.AbstractJhoveMDExtractorPlugin;
+import edu.harvard.hul.ois.jhove.Property;
 
 import javax.imageio.ImageIO;
 
@@ -21,7 +20,6 @@ public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
         attList.add("EPUBMetadata.PageCount");
         attList.add("EPUBMetadata.CharacterCount");
         attList.add("EPUBMetadata.Language");
-
         attList.add("EPUBMetadata.Info.Identifier");
         attList.add("EPUBMetadata.Info.Title");
         attList.add("EPUBMetadata.Info.Creator");
@@ -30,10 +28,8 @@ public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
         attList.add("EPUBMetadata.Info.Publisher");
         attList.add("EPUBMetadata.Info.Subject");
         attList.add("EPUBMetadata.Info.Rights");
-
-        attList.add("EPUBMetadata.Fonts.Fonts.FontName");
-        attList.add("EPUBMetadata.Fonts.Fonts.FontFile");
-
+        attList.add("EPUBMetadata.Fonts.Font.FontName");
+        attList.add("EPUBMetadata.Fonts.Font.FontFile");
         attList.add("EPUBMetadata.MediaTypes");
         attList.add("EPUBMetadata.References");
         attList.add("EPUBMetadata.Resources");
@@ -66,5 +62,52 @@ public class EPUBPTCMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
 
     public void initParams(Map<String, String> initParams) {
         this.pluginVersion = initParams.get(PLUGIN_VERSION_INIT_PARAM);
+    }
+
+    @Override
+    public String getAttributeByName(String attributeName) {
+        if (attributeName != null && attributeName.equalsIgnoreCase("EPUBMetadata.Fonts.Font.FontName")) {
+            Object object = this.getOriginalAttributeByName("EPUBMetadata.Fonts");
+            if (object == null) {
+                return null;
+            }
+            TreeSet<Property> fonts = (TreeSet<Property>) object;
+            List<String> fontNames = new ArrayList<>();
+            for (Property font : fonts) {
+                if (!font.getName().equalsIgnoreCase("Font")) {
+                    continue;
+                }
+                TreeSet<Property> fontValues = (TreeSet<Property>) font.getValue();
+                for (Property fontItem : fontValues) {
+                    if (!fontItem.getName().equalsIgnoreCase("FontName")) {
+                        continue;
+                    }
+                    fontNames.add(fontItem.getValue().toString());
+                }
+            }
+            return String.join(";", fontNames);
+        } else if (attributeName != null && attributeName.equalsIgnoreCase("EPUBMetadata.Fonts.Font.FontFile")) {
+            Object object = this.getOriginalAttributeByName("EPUBMetadata.Fonts");
+            if (object == null) {
+                return null;
+            }
+            TreeSet<Property> fonts = (TreeSet<Property>) object;
+            List<String> fontFiles = new ArrayList<>();
+            for (Property font : fonts) {
+                if (!font.getName().equalsIgnoreCase("Font")) {
+                    continue;
+                }
+                TreeSet<Property> fontValues = (TreeSet<Property>) font.getValue();
+                for (Property fontItem : fontValues) {
+                    if (!fontItem.getName().equalsIgnoreCase("FontFile")) {
+                        continue;
+                    }
+                    fontFiles.add(fontItem.getValue().toString());
+                }
+            }
+            return String.join(";", fontFiles);
+        } else {
+            return super.getAttributeByName(attributeName);
+        }
     }
 }

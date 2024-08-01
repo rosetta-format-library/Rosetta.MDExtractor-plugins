@@ -6,6 +6,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.File;
+import java.util.LinkedList;
 import java.util.Objects;
 
 public class PDFHULMDExtractorPluginTest extends AbstractNLNZMDExtractorPluginTest {
@@ -25,14 +26,39 @@ public class PDFHULMDExtractorPluginTest extends AbstractNLNZMDExtractorPluginTe
     @Test
     public void testExtractAll() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(Objects.requireNonNull(classLoader.getResource("sample.pdf")).getFile());
+        File file = new File(Objects.requireNonNull(classLoader.getResource("images.pdf")).getFile());
         testInstance.extract(file.getAbsolutePath());
-        String a = testInstance.getAttributeByName("PDFMetadata.Pages.Page.Sequence");
+//        String a = testInstance.getAttributeByName("PDFMetadata.Pages.Page.Sequence");
+        String a = testInstance.getAttributeByName("PDFMetadata.Images.Image.NisoImageMetadata.CompressionScheme");
         assert a != null;
-        assert a.equals("1");
+        assert a.equals("6");
 
         String b = testInstance.getAttributeByName("PDFMetadata.Objects");
         assert b != null;
+    }
+
+    @Test
+    public void testOriginalExtractAll() throws Exception {
+        ClassLoader classLoader = getClass().getClassLoader();
+        File file = new File(Objects.requireNonNull(classLoader.getResource("sample.pdf")).getFile());
+        testInstance.extract(file.getAbsolutePath());
+//        String a = testInstance.getAttributeByName("PDFMetadata.Pages.Page.Sequence");
+        LinkedList a = (LinkedList) testInstance.getOriginalAttributeByName("PDFMetadata.Pages");
+        assert a != null;
+        assert a.size() == 2;
+
+        Object b = testInstance.getOriginalAttributeByName("PDFMetadata.Objects");
+        assert b != null;
+    }
+
+    @Test
+    public void testPagesPageCount() throws Exception {
+        ClassLoader classLoader = getClass().getClassLoader();
+        File file = new File(Objects.requireNonNull(classLoader.getResource("sample.pdf")).getFile());
+        testInstance.extract(file.getAbsolutePath());
+        String a = testInstance.getAttributeByName("PDFMetadata.Pages.PageCount");
+        assert a != null;
+        assert a.equals("2");
     }
 
     @Override
