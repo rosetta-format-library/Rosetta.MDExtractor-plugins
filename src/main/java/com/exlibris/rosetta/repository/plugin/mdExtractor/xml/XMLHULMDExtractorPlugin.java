@@ -69,7 +69,7 @@ public class XMLHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
 
     public String getAgentName()
     {
-    	return "JHOVE 1.28.0, XML-hul " + getRelease();
+    	return "JHOVE 1.32.0, XML-hul " + getRelease();
     }
 
     public String getAgent()

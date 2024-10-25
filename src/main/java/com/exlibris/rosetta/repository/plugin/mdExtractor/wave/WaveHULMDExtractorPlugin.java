@@ -128,7 +128,7 @@ public class WaveHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
 
     public String getAgentName()
     {
-    	return "JHOVE 1.28.0, WAVE-hul " + getRelease();
+    	return "JHOVE 1.32.0, WAVE-hul " + getRelease();
     }
 
     public String getAgent()
