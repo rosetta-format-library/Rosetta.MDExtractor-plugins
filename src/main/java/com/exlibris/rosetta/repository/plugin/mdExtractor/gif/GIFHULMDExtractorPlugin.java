@@ -169,7 +169,7 @@ public class GIFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
 
     public String getAgentName()
     {
-    	return "JHOVE 1.32.0, GIF-hul " + getRelease();
+    	return "JHOVE 1.34.0, GIF-hul " + getRelease();
     }
 
     public String getAgent()

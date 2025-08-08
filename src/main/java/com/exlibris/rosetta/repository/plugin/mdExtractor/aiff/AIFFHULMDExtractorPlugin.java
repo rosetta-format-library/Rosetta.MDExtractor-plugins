@@ -115,8 +115,6 @@ public class AIFFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
     	attList.add("AIFFMetadata.Profiles");
     	attList.add("AIFFMetadata.SamplesFrames");
     	attList.add("AIFFMetadata.AESAudioMetadata.Face.Timeline.Start.Seconds");
-
-
     }
 
     @Override
@@ -132,7 +130,7 @@ public class AIFFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
 
     public String getAgentName()
     {
-    	return "JHOVE 1.32.0, AIFF-hul " + getRelease();
+    	return "JHOVE 1.34.0, AIFF-hul " + getRelease();
     }
 
     public String getAgent()

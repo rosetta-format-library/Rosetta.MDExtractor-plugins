@@ -260,7 +260,7 @@ public class TIFFHULMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin{
 
     public String getAgentName()
     {
-    	return "JHOVE 1.32.0, TIFF-hul " + getRelease();
+    	return "JHOVE 1.34.0, TIFF-hul " + getRelease();
     }
 
     public String getAgent()

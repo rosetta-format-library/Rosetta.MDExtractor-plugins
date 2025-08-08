@@ -82,7 +82,7 @@ public class WARCKBMDExtractorPlugin extends AbstractJhoveMDExtractorPlugin {
     }
 
     public String getAgentName() {
-        return "JHOVE 1.32.0, WARC-kb " + getRelease();
+        return "JHOVE 1.34.0, WARC-kb " + getRelease();
     }
 
     public String getAgent() {
