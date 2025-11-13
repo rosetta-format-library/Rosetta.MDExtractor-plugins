@@ -80,4 +80,16 @@ public class PDFHULMDExtractorPluginTest extends AbstractNLNZMDExtractorPluginTe
     protected void prepareExpectedValues() {
 
     }
+
+    @Test
+    public void testNegativeObjectsCount() throws Exception {
+        ClassLoader classLoader = getClass().getClassLoader();
+        File file = new File(Objects.requireNonNull(classLoader.getResource("R1603377.pdf")).getFile());
+        testInstance.extract(file.getAbsolutePath());
+
+        //PDFMetadata.Objects
+        Object b = testInstance.getAttributeByName("PDFMetadata.PDFMetadata.Objects");
+        assert b != null;
+        assert b.toString().equals("-1");
+    }
 }
