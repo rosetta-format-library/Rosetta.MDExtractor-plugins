@@ -309,10 +309,11 @@ public abstract class AbstractJhoveMDExtractorPlugin implements MDExtractorPlugi
         //scalar
         String scalar = object.toString();
 
-        try { //avoid -1 values
-            return (Double.valueOf(scalar) == -1) ? null : scalar;
-        } catch (Exception e) {
-        }
+        // Negative value is required, not avoid -1 in 1.34
+        //        try { //avoid -1 values
+        //            return (Double.valueOf(scalar) == -1) ? null : scalar;
+        //        } catch (Exception e) {
+        //        }
 
         return scalar;
     }
