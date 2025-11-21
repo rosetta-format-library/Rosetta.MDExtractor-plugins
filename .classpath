@@ -1,20 +1,634 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="E:/dps/workspace-ROSETTA-HEAD_4.2.1/MDExtractor-plugins/lib/axis.jar"/>
-	<classpathentry kind="lib" path="E:/dps/workspace-ROSETTA-HEAD_4.2.1/MDExtractor-plugins/lib/commons-httpclient-3.1.jar"/>
-	<classpathentry kind="lib" path="E:/dps/workspace-ROSETTA-HEAD_4.2.1/MDExtractor-plugins/lib/commons-io-2.0.1.jar"/>
-	<classpathentry kind="lib" path="E:/dps/workspace-ROSETTA-HEAD_4.2.1/MDExtractor-plugins/lib/commons-lang-2.6.jar"/>
-	<classpathentry kind="lib" path="E:/dps/workspace-ROSETTA-HEAD_4.2.1/MDExtractor-plugins/lib/httpclient-4.1.2.jar"/>
-	<classpathentry kind="lib" path="E:/dps/workspace-ROSETTA-HEAD_4.2.1/MDExtractor-plugins/lib/httpcore-4.1.2.jar"/>
-	<classpathentry kind="lib" path="E:/dps/workspace-ROSETTA-HEAD_4.2.1/MDExtractor-plugins/lib/jackson-core-asl-1.5.2.jar"/>
-	<classpathentry kind="lib" path="E:/dps/workspace-ROSETTA-HEAD_4.2.1/MDExtractor-plugins/lib/jhove-1.10.jar"/>
-	<classpathentry kind="lib" path="E:/dps/workspace-ROSETTA-HEAD_4.2.1/MDExtractor-plugins/lib/jhove-handler-1.10.jar"/>
-	<classpathentry kind="lib" path="E:/dps/workspace-ROSETTA-HEAD_4.2.1/MDExtractor-plugins/lib/jhove-module-1.10.jar"/>
-	<classpathentry kind="lib" path="E:/dps/workspace-ROSETTA-HEAD_4.2.1/MDExtractor-plugins/lib/json-simple-1.1.jar"/>
-	<classpathentry kind="lib" path="E:/dps/workspace-ROSETTA-HEAD_4.2.1/MDExtractor-plugins/lib/xmlbeans-2.3.0.jar"/>
-	<classpathentry kind="lib" path="E:/dps/workspace-ROSETTA-HEAD_4.2.1/MDExtractor-plugins/lib/zip4j-1.3.2.jar"/>
-	<classpathentry kind="lib" path="E:/dps/workspace-ROSETTA-HEAD_4.2.1/MDExtractor-plugins/lib/dps-sdk-4.2.1.jar"/>
+	<classpathentry kind="src" output="build/resources/test" path="src/test/resources">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="resource" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/test" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/resources/main" path="src/main/resources">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="resource" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/main" path="src/main/java">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/test" path="build/generated/sources/annotationProcessor/java/test">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/main" path="build/generated/sources/annotationProcessor/java/main">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.18.2/fb64ccac5c27dca8819418eb4e443a9f496d9ee7/jackson-core-2.18.2.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.18.2/5e0fad4e5ad2e6259ebcc1f98b9d13bc9fc01ff3/jackson-core-2.18.2-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.fasterxml.jackson.core"/>
+			<attribute name="artifactId" value="jackson-core"/>
+			<attribute name="version" value="2.18.2"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/gif-hul/1.4.3/a0f965294411f87a8ef867a2c5936afb3789d2b3/gif-hul-1.4.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/gif-hul/1.4.3/dd88b5b3a237eea15e07d86aeae7d439d651e1c4/gif-hul-1.4.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openpreservation.jhove.modules"/>
+			<attribute name="artifactId" value="gif-hul"/>
+			<attribute name="version" value="1.4.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-nop/1.7.36/a3c1eb685d59414527faa93623acae311c184032/slf4j-nop-1.7.36.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-nop/1.7.36/ed83b905b1c5d427a67bd03cff825207899711c3/slf4j-nop-1.7.36-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.slf4j"/>
+			<attribute name="artifactId" value="slf4j-nop"/>
+			<attribute name="version" value="1.7.36"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/wave-hul/1.8.3/794032390b01533c3ee15d7a11924ae5ba8b1ae0/wave-hul-1.8.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/wave-hul/1.8.3/7d2e33980cbc309231396f82feeb7e4981fb5042/wave-hul-1.8.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openpreservation.jhove.modules"/>
+			<attribute name="artifactId" value="wave-hul"/>
+			<attribute name="version" value="1.8.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove/jhove-core/1.34.0/fe003144b5e5546c7ac7ce7b03b3f9994d87fa94/jhove-core-1.34.0.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove/jhove-core/1.34.0/29ceb7a8465fa394f11efcbacbf0e5c850e42355/jhove-core-1.34.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openpreservation.jhove"/>
+			<attribute name="artifactId" value="jhove-core"/>
+			<attribute name="version" value="1.34.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/jpeg-hul/1.5.4/7715f35fd92d702a91fa0ee8426087ab45de8417/jpeg-hul-1.5.4.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/jpeg-hul/1.5.4/e6721719e20053c538b98ec8c2374c5ca3f14085/jpeg-hul-1.5.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openpreservation.jhove.modules"/>
+			<attribute name="artifactId" value="jpeg-hul"/>
+			<attribute name="version" value="1.5.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/4.0.0/bbb399208d288b15ec101fa4fcfc4bd77cedc97a/jakarta.xml.bind-api-4.0.0.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/4.0.0/b8e46353907cfaccef843fff62d72476f8ad88ce/jakarta.xml.bind-api-4.0.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="jakarta.xml.bind"/>
+			<attribute name="artifactId" value="jakarta.xml.bind-api"/>
+			<attribute name="version" value="4.0.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove/jhove-ext-modules/1.34.0/610c659f65106e39ec3d4a9b8a3f951344e2be6d/jhove-ext-modules-1.34.0.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove/jhove-ext-modules/1.34.0/5765fa547226ef2d4d068d4d6d870e5cf0ec40f0/jhove-ext-modules-1.34.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openpreservation.jhove"/>
+			<attribute name="artifactId" value="jhove-ext-modules"/>
+			<attribute name="version" value="1.34.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.google.guava"/>
+			<attribute name="artifactId" value="listenablefuture"/>
+			<attribute name="version" value="9999.0-empty-to-avoid-conflict-with-guava"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/tiff-hul/1.9.5/4e88d0cfdda2afd3ff414b8c2ab9ad8a43782243/tiff-hul-1.9.5.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/tiff-hul/1.9.5/102ff6f60cc5ab322a7efcd48b5febf9e3006235/tiff-hul-1.9.5-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openpreservation.jhove.modules"/>
+			<attribute name="artifactId" value="tiff-hul"/>
+			<attribute name="version" value="1.9.5"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.jwat/jwat-arc/1.0.3/52de5e075978b616cef74e49e4f81d3f7291ce6c/jwat-arc-1.0.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.jwat/jwat-arc/1.0.3/ee0e25491c39e7d8da087330c260a6ae1d90c371/jwat-arc-1.0.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.jwat"/>
+			<attribute name="artifactId" value="jwat-arc"/>
+			<attribute name="version" value="1.0.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/2.1.0/a58861b5deac5e151140511cf57d6b80a83f2d20/jakarta.activation-api-2.1.0.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/2.1.0/f45e5d38e1145ba5de24f8ecf6c731291bbb167/jakarta.activation-api-2.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="jakarta.activation"/>
+			<attribute name="artifactId" value="jakarta.activation-api"/>
+			<attribute name="version" value="2.1.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/net.minidev/json-smart/2.4.10/91cb329e9424bf32131eeb1ce2d17bf31b9899bc/json-smart-2.4.10.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/net.minidev/json-smart/2.4.10/d0a77c330fc6ea765d002d598ff1e2328b5aeda7/json-smart-2.4.10-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="net.minidev"/>
+			<attribute name="artifactId" value="json-smart"/>
+			<attribute name="version" value="2.4.10"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/net.minidev/accessors-smart/2.4.9/32e540749224c22c9b17de8137e916aae9057e22/accessors-smart-2.4.9.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/net.minidev/accessors-smart/2.4.9/d287b022105b7b85df83e254e398e6e5d415ee44/accessors-smart-2.4.9-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="net.minidev"/>
+			<attribute name="artifactId" value="accessors-smart"/>
+			<attribute name="version" value="2.4.9"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path/2.8.0/b4ab3b7a9e425655a0ca65487bbbd6d7ddb75160/json-path-2.8.0.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path/2.8.0/4cef8f7eaa1e056e5eae9bd000e43b342fdffda8/json-path-2.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.jayway.jsonpath"/>
+			<attribute name="artifactId" value="json-path"/>
+			<attribute name="version" value="2.8.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.google.errorprone"/>
+			<attribute name="artifactId" value="error_prone_annotations"/>
+			<attribute name="version" value="2.18.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/aiff-hul/1.6.2/5e913e1a9da5af635840890d076f0aa54eb277b0/aiff-hul-1.6.2.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/aiff-hul/1.6.2/3d12a0c185f44d5b7d6e9087cc25412e3a9f570a/aiff-hul-1.6.2-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openpreservation.jhove.modules"/>
+			<attribute name="artifactId" value="aiff-hul"/>
+			<attribute name="version" value="1.6.2"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.jwat/jwat-common/1.0.3/169cf3f940440328ff566df5082bbb2893ec7a93/jwat-common-1.0.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.jwat/jwat-common/1.0.3/d262ba9b31f8ea6baeffb27358e8e183e83a96c4/jwat-common-1.0.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.jwat"/>
+			<attribute name="artifactId" value="jwat-common"/>
+			<attribute name="version" value="1.0.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.client5/httpclient5/5.1.3/13c984b7b881afcff3a7f0bb95878724a48a4b66/httpclient5-5.1.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.client5/httpclient5/5.1.3/8fec06124157f4adf8fe9ffdc75620e3b5d318d2/httpclient5-5.1.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.apache.httpcomponents.client5"/>
+			<attribute name="artifactId" value="httpclient5"/>
+			<attribute name="version" value="5.1.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.twelvemonkeys.imageio/imageio-jpeg/3.9.4/af05e039169ab2d42efde9070f55565a169f795d/imageio-jpeg-3.9.4.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.twelvemonkeys.imageio/imageio-jpeg/3.9.4/c752362739b51102bd63a190e6ba674c8481e20c/imageio-jpeg-3.9.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.twelvemonkeys.imageio"/>
+			<attribute name="artifactId" value="imageio-jpeg"/>
+			<attribute name="version" value="3.9.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.twelvemonkeys.common/common-image/3.9.4/8fc121f4f652cb8ef626ad4dade85b64948df36c/common-image-3.9.4.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.twelvemonkeys.common/common-image/3.9.4/241c8409ecb53077a486486e0b35f179fd99e354/common-image-3.9.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.twelvemonkeys.common"/>
+			<attribute name="artifactId" value="common-image"/>
+			<attribute name="version" value="3.9.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/net.sf.saxon/Saxon-HE/11.4/d926a13f2717ad1ea6e051550b8fd6207a587051/Saxon-HE-11.4.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/net.sf.saxon/Saxon-HE/11.4/eff3c87512aafe42947796faf8b799c1f78b893a/Saxon-HE-11.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="net.sf.saxon"/>
+			<attribute name="artifactId" value="Saxon-HE"/>
+			<attribute name="version" value="11.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.18.2/985d77751ebc7fce5db115a986bc9aa82f973f4a/jackson-annotations-2.18.2.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.18.2/e3c546633a0f322a4b6edc930d55641b908d7cfb/jackson-annotations-2.18.2-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.fasterxml.jackson.core"/>
+			<attribute name="artifactId" value="jackson-annotations"/>
+			<attribute name="version" value="2.18.2"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.twelvemonkeys.common/common-lang/3.9.4/c68d7dd18962dda58615d3b5d929a68c8f8a1092/common-lang-3.9.4.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.twelvemonkeys.common/common-lang/3.9.4/e2f6124c93cea88949d46790b9c034ea38061766/common-lang-3.9.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.twelvemonkeys.common"/>
+			<attribute name="artifactId" value="common-lang"/>
+			<attribute name="version" value="3.9.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/isorelax/isorelax/20030108/b21859c352bd959ea22d06b2fe8c93b2e24531b9/isorelax-20030108.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="isorelax"/>
+			<attribute name="artifactId" value="isorelax"/>
+			<attribute name="version" value="20030108"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.sun.xml.bind/jaxb-core/4.0.1/e8bf2d711d2d4250537199602bccae0cd4e62726/jaxb-core-4.0.1.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.sun.xml.bind/jaxb-core/4.0.1/de7e32142f59c5aa528f34847ce1cd322d8412b6/jaxb-core-4.0.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.sun.xml.bind"/>
+			<attribute name="artifactId" value="jaxb-core"/>
+			<attribute name="version" value="4.0.1"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.3/8e6300ef51c1d801a7ed62d07cd221aca3a90640/asm-9.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.3/ce26e415ccafa10c6624a07bdb38d969110f568f/asm-9.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.ow2.asm"/>
+			<attribute name="artifactId" value="asm"/>
+			<attribute name="version" value="9.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.core5/httpcore5-h2/5.1.3/4664b59b09f5ee008e37a963bbb92f4068e91696/httpcore5-h2-5.1.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.core5/httpcore5-h2/5.1.3/7c926d1c5a7d0d42453f2c1cf886787235e99e98/httpcore5-h2-5.1.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.apache.httpcomponents.core5"/>
+			<attribute name="artifactId" value="httpcore5-h2"/>
+			<attribute name="version" value="5.1.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.eclipse.angus/angus-activation/1.0.0/f0ceddd49f92109fbfad9125e958f5bfd3f2aa1/angus-activation-1.0.0.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.eclipse.angus/angus-activation/1.0.0/cd3a039e615527aea77d5797209ff0a6d2fc8346/angus-activation-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.eclipse.angus"/>
+			<attribute name="artifactId" value="angus-activation"/>
+			<attribute name="version" value="1.0.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.4.0-b180830.0359/b54184b7dcab2031add3f525550c7f1b7e12209d/jaxb-api-2.4.0-b180830.0359.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.4.0-b180830.0359/76eeee760b97819cb6fd6e3dd24df05ebbe6f9f8/jaxb-api-2.4.0-b180830.0359-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="javax.xml.bind"/>
+			<attribute name="artifactId" value="jaxb-api"/>
+			<attribute name="version" value="2.4.0-b180830.0359"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/xerces/xercesImpl/2.12.2/f051f988aa2c9b4d25d05f95742ab0cc3ed789e2/xercesImpl-2.12.2.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/xerces/xercesImpl/2.12.2/7d743949710f2d9cda30a80356ad5efcbdf4239a/xercesImpl-2.12.2-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="xerces"/>
+			<attribute name="artifactId" value="xercesImpl"/>
+			<attribute name="version" value="2.12.2"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/utf8-hul/1.7.4/ad88fffc062754b519007cfe82536e5493b77e30/utf8-hul-1.7.4.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/utf8-hul/1.7.4/c00216edc850c0afe7dbacdf6c35b75bc58af8b2/utf8-hul-1.7.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openpreservation.jhove.modules"/>
+			<attribute name="artifactId" value="utf8-hul"/>
+			<attribute name="version" value="1.7.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.18.2/deef8697b92141fb6caf7aa86966cff4eec9b04f/jackson-databind-2.18.2.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.18.2/84a66f5d72f7a2ca26e82959028a6832c7a3cc1e/jackson-databind-2.18.2-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.fasterxml.jackson.core"/>
+			<attribute name="artifactId" value="jackson-databind"/>
+			<attribute name="version" value="2.18.2"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.slf4j"/>
+			<attribute name="artifactId" value="slf4j-api"/>
+			<attribute name="version" value="1.7.36"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/log4j/log4j/1.2.17/5af35056b4d257e4b64b9e8069c0746e8b08629f/log4j-1.2.17.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/log4j/log4j/1.2.17/677abe279b68c5e7490d6d50c6951376238d7d3e/log4j-1.2.17-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="log4j"/>
+			<attribute name="artifactId" value="log4j"/>
+			<attribute name="version" value="1.2.17"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.relaxng/jing/20181222/d847e7f2685866a0a3783508669a881313a959ab/jing-20181222.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.relaxng/jing/20181222/c80333d99fa5701c338a94f400cdc17f4a132d59/jing-20181222-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.relaxng"/>
+			<attribute name="artifactId" value="jing"/>
+			<attribute name="version" value="20181222"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.twelvemonkeys.imageio/imageio-core/3.9.4/e33aabf2d21a2f66817a258abfcd9f5b1e898117/imageio-core-3.9.4.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.twelvemonkeys.imageio/imageio-core/3.9.4/c4ba5f79dd075b01c3517811c01fb0382ad06a83/imageio-core-3.9.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.twelvemonkeys.imageio"/>
+			<attribute name="artifactId" value="imageio-core"/>
+			<attribute name="version" value="3.9.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/ascii-hul/1.4.2/71a99bb703d935496c406dea260ea67b0bfb6efa/ascii-hul-1.4.2.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/ascii-hul/1.4.2/6ffe087d8f049b42bed9467518ddb5db48889b99/ascii-hul-1.4.2-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openpreservation.jhove.modules"/>
+			<attribute name="artifactId" value="ascii-hul"/>
+			<attribute name="version" value="1.4.2"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/jpeg2000-hul/1.4.4/c806204a8622a5925db35e59e7cbf6828ef041d2/jpeg2000-hul-1.4.4.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/jpeg2000-hul/1.4.4/72a554ba9af816342b9783f327e82f96c99f8269/jpeg2000-hul-1.4.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openpreservation.jhove.modules"/>
+			<attribute name="artifactId" value="jpeg2000-hul"/>
+			<attribute name="version" value="1.4.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.ibm.icu/icu4j/72.1/bc9057df4b5efddf7f6d1880bf7f3399f4ce5633/icu4j-72.1.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.ibm.icu/icu4j/72.1/21c9043b596850d5224f0bde047b91d188a7eac6/icu4j-72.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.ibm.icu"/>
+			<attribute name="artifactId" value="icu4j"/>
+			<attribute name="version" value="72.1"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.google.code.findbugs"/>
+			<attribute name="artifactId" value="jsr305"/>
+			<attribute name="version" value="3.0.2"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.twelvemonkeys.imageio/imageio-metadata/3.9.4/423ab3a09a87ab0b1e6831269db74832ee4184ac/imageio-metadata-3.9.4.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.twelvemonkeys.imageio/imageio-metadata/3.9.4/8bff1172d16ab05699bd985e8ff607e31b781813/imageio-metadata-3.9.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.twelvemonkeys.imageio"/>
+			<attribute name="artifactId" value="imageio-metadata"/>
+			<attribute name="version" value="3.9.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.twelvemonkeys.common/common-io/3.9.4/5a0bbb2f431196990780a4912f0ac46009c82f0e/common-io-3.9.4.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.twelvemonkeys.common/common-io/3.9.4/159dac11f57a59584f9d8ac6fe217e3b386c0dec/common-io-3.9.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.twelvemonkeys.common"/>
+			<attribute name="artifactId" value="common-io"/>
+			<attribute name="version" value="3.9.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.sun.xml.bind/jaxb-impl/4.0.1/bad26cea1d483dda57b6f634cdeaca3238637aea/jaxb-impl-4.0.1.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.sun.xml.bind/jaxb-impl/4.0.1/b37ab0f68b21248a9fc35fbce4d7275a4602e9c1/jaxb-impl-4.0.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.sun.xml.bind"/>
+			<attribute name="artifactId" value="jaxb-impl"/>
+			<attribute name="version" value="4.0.1"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.21/4ec95b60d4e86b5c95a0e919cb172a0af98011ef/commons-compress-1.21.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.21/b3e0a269baa0d05b02f9b4447be463d25da8c097/commons-compress-1.21-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.apache.commons"/>
+			<attribute name="artifactId" value="commons-compress"/>
+			<attribute name="version" value="1.21"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.jwat/jwat-warc/1.0.3/4b09d7d3d277c7196a199799bb008f9580cada7b/jwat-warc-1.0.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.jwat/jwat-warc/1.0.3/46e932b3cc42af84198d71512327ba9804fbd4a8/jwat-warc-1.0.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.jwat"/>
+			<attribute name="artifactId" value="jwat-warc"/>
+			<attribute name="version" value="1.0.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/html-hul/1.4.4/2269ae9918f37103379b9c4a46ff264f449b43c2/html-hul-1.4.4.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/html-hul/1.4.4/eed2ac4e24f7ecffa8df468ad7916389a879dada/html-hul-1.4.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openpreservation.jhove.modules"/>
+			<attribute name="artifactId" value="html-hul"/>
+			<attribute name="version" value="1.4.4"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/jakarta.json/jakarta.json-api/2.1.3/4febd83e1d9d1561d078af460ecd19532383735c/jakarta.json-api-2.1.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/jakarta.json/jakarta.json-api/2.1.3/7a4e09c9df2cb83210b0f8a7cfea8541459d20d6/jakarta.json-api-2.1.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="jakarta.json"/>
+			<attribute name="artifactId" value="jakarta.json-api"/>
+			<attribute name="version" value="2.1.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/32.0.0-jre/25d6662e20fc04c7b38f8ca3ab5d2f4a19272f80/guava-32.0.0-jre.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/32.0.0-jre/cb5b660ff8ce40bac8a50173dd2891c9a0cdeb64/guava-32.0.0-jre-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.google.guava"/>
+			<attribute name="artifactId" value="guava"/>
+			<attribute name="version" value="32.0.0-jre"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.4.01/3789d9fada2d3d458c4ba2de349d48780f381ee3/xml-apis-1.4.01.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.4.01/5502da0c4c0a7916a604356ef19394ccfa30cd4b/xml-apis-1.4.01-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="xml-apis"/>
+			<attribute name="artifactId" value="xml-apis"/>
+			<attribute name="version" value="1.4.01"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.m2/repository/commons-io/commons-io/2.0.1/commons-io-2.0.1.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="commons-io"/>
+			<attribute name="artifactId" value="commons-io"/>
+			<attribute name="version" value="2.0.1"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.xmlresolver/xmlresolver/4.4.3/aa8421211b0f69b5572d2d4b4252b2d87f957754/xmlresolver-4.4.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.xmlresolver/xmlresolver/4.4.3/d074fb4bc46d0439a63650b5ea700b07ea6e920/xmlresolver-4.4.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.xmlresolver"/>
+			<attribute name="artifactId" value="xmlresolver"/>
+			<attribute name="version" value="4.4.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.google.guava"/>
+			<attribute name="artifactId" value="failureaccess"/>
+			<attribute name="version" value="1.0.1"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.core5/httpcore5/5.1.3/d1638d1e5f2793f187d4144c702a93524ba6fd3b/httpcore5-5.1.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.core5/httpcore5/5.1.3/75409375b1747c21e6484a6f1f103580ad097110/httpcore5-5.1.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.apache.httpcomponents.core5"/>
+			<attribute name="artifactId" value="httpcore5"/>
+			<attribute name="version" value="5.1.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest/2.2/1820c0968dba3a11a1b30669bb1f01978a91dedc/hamcrest-2.2.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest/2.2/a0a13cfc629420efb587d954f982c4c6a100da25/hamcrest-2.2-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.hamcrest"/>
+			<attribute name="artifactId" value="hamcrest"/>
+			<attribute name="version" value="2.2"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/nu.validator/galimatias/0.1.3/fcf9c70f53b9c0e7bc723f43558488bf58390b33/galimatias-0.1.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/nu.validator/galimatias/0.1.3/162c5d2c91e67182135f72ec4a701cf146a39684/galimatias-0.1.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="nu.validator"/>
+			<attribute name="artifactId" value="galimatias"/>
+			<attribute name="version" value="0.1.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.w3c.css/sac/1.3/cdb2dcb4e22b83d6b32b93095f644c3462739e82/sac-1.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.w3c.css/sac/1.3/d0eab9163d161293dcd1e291bc2b6b09b4b5c717/sac-1.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.w3c.css"/>
+			<attribute name="artifactId" value="sac"/>
+			<attribute name="version" value="1.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.jwat/jwat-archive-common/1.0.3/d43fc5ce3383bc86125583e0ace896a6201ddc3b/jwat-archive-common-1.0.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.jwat/jwat-archive-common/1.0.3/40fa46b8b43cdd994ce58ae172db58b7c931d18c/jwat-archive-common-1.0.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.jwat"/>
+			<attribute name="artifactId" value="jwat-archive-common"/>
+			<attribute name="version" value="1.0.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.xmlresolver/xmlresolver/4.4.3/89079ec236d9683bb5f6f5cf4bef0cfc01b46e55/xmlresolver-4.4.3-data.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.xmlresolver/xmlresolver/4.4.3/d074fb4bc46d0439a63650b5ea700b07ea6e920/xmlresolver-4.4.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.xmlresolver"/>
+			<attribute name="artifactId" value="xmlresolver"/>
+			<attribute name="version" value="4.4.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.m2/repository/net/lingala/zip4j/zip4j/1.3.2/zip4j-1.3.2.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="net.lingala.zip4j"/>
+			<attribute name="artifactId" value="zip4j"/>
+			<attribute name="version" value="1.3.2"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.jwat/jwat-gzip/1.0.3/db4b3bd992018bee6e0d4d7503d8f495daaab1a4/jwat-gzip-1.0.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.jwat/jwat-gzip/1.0.3/b6db1eedcd807a1e048eeb5ed6412059d42d8a9f/jwat-gzip-1.0.3-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.jwat"/>
+			<attribute name="artifactId" value="jwat-gzip"/>
+			<attribute name="version" value="1.0.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.w3c/epubcheck/5.2.1/2d5a137196afd912284df786e839acd7537803cf/epubcheck-5.2.1.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.w3c/epubcheck/5.2.1/ddcb0c16ef859993791b5c45f7347797f9ba2fff/epubcheck-5.2.1-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.w3c"/>
+			<attribute name="artifactId" value="epubcheck"/>
+			<attribute name="version" value="5.2.1"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/xml-hul/1.5.5/e07a5b7d99bcc986035403d99565c024d66d936b/xml-hul-1.5.5.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/xml-hul/1.5.5/1b44f3e2fbd88a0c6e20de3fa780a8e99db21a3d/xml-hul-1.5.5-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openpreservation.jhove.modules"/>
+			<attribute name="artifactId" value="xml-hul"/>
+			<attribute name="version" value="1.5.5"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.m2/repository/com/exlibris/dps-sdk/4.2.1/dps-sdk-4.2.1.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.exlibris"/>
+			<attribute name="artifactId" value="dps-sdk"/>
+			<attribute name="version" value="4.2.1"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.checkerframework"/>
+			<attribute name="artifactId" value="checker-qual"/>
+			<attribute name="version" value="3.33.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/pdf-hul/1.12.7/8e664afc7a8a0566288c85f0af3562ca673f8278/pdf-hul-1.12.7.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.openpreservation.jhove.modules/pdf-hul/1.12.7/25ec7b228970aa4b13d39537bf6b3cd08128f063/pdf-hul-1.12.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.openpreservation.jhove.modules"/>
+			<attribute name="artifactId" value="pdf-hul"/>
+			<attribute name="version" value="1.12.7"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/javax.activation/javax.activation-api/1.2.0/85262acf3ca9816f9537ca47d5adeabaead7cb16/javax.activation-api-1.2.0.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/javax.activation/javax.activation-api/1.2.0/1b4c6e77d35adab19794746d8ea753df30d77dca/javax.activation-api-1.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="javax.activation"/>
+			<attribute name="artifactId" value="javax.activation-api"/>
+			<attribute name="version" value="1.2.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path-assert/2.8.0/c186e1f78e4893424ad07d287396f8cc5bcd09a8/json-path-assert-2.8.0.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path-assert/2.8.0/8390a7ce4c29ea47513de4bc831dc0f17a48d3dc/json-path-assert-2.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.jayway.jsonpath"/>
+			<attribute name="artifactId" value="json-path-assert"/>
+			<attribute name="version" value="2.8.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.eclipse.parsson/parsson/1.1.7/f5825abecd373006262dd319d7df8c5cdbd140ca/parsson-1.1.7.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.eclipse.parsson/parsson/1.1.7/a3fd8abc30c86a2841620c02b70db2d545df1324/parsson-1.1.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.eclipse.parsson"/>
+			<attribute name="artifactId" value="parsson"/>
+			<attribute name="version" value="1.1.7"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="commons-codec"/>
+			<attribute name="artifactId" value="commons-codec"/>
+			<attribute name="version" value="1.15"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="com.google.j2objc"/>
+			<attribute name="artifactId" value="j2objc-annotations"/>
+			<attribute name="version" value="2.8"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="org.hamcrest"/>
+			<attribute name="artifactId" value="hamcrest-core"/>
+			<attribute name="version" value="1.3"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/leefr/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.1/cdd00374f1fee76b11e2a9d127405aa3f6be5b6a/junit-4.13.1.jar" sourcepath="/home/leefr/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.1/523bdce923a13622132b263550d06519fc591ec4/junit-4.13.1-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="groupId" value="junit"/>
+			<attribute name="artifactId" value="junit"/>
+			<attribute name="version" value="4.13.1"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

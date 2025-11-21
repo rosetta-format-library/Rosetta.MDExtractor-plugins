@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://com/exlibris/digitool/repository/api/xmlbeans"
+	targetNamespace="http://com/exlibris/digitool/repository/api/xmlbeans"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="mdExtractor">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="agent" type="xs:string" minOccurs="1" maxOccurs="1" />
+				<xs:element name="profile" type="xs:string" minOccurs="0" maxOccurs="1" />
+				<xs:element name="formatName" type="xs:string" minOccurs="0" maxOccurs="1" />
+				<xs:element name="formatVersion" type="xs:string" minOccurs="0" maxOccurs="1" />
+				<xs:element name="mimeType" type="xs:string" minOccurs="0" maxOccurs="1" />
+				<xs:element name="imageCount" type="xs:int" minOccurs="0" maxOccurs="1" />
+				<xs:element name="isValid" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+				<xs:element name="isWellFormed" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+				<xs:element name="attributes" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:attribute name="ID" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>ID: Attribute name</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+
+
